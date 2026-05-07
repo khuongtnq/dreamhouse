@@ -119,6 +119,27 @@
         .sky-sec .sec-tag::before{content:'';flex:0 0 36px;height:1px;background:var(--clay)}
 
         footer{background:var(--charcoal);padding:1.8rem 8vw;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.1em;color:rgba(196,168,130,.45);flex-wrap:wrap;gap:.5rem}
+        .signature-divider{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:40px 0;
+        }
+
+        .signature-divider::before,
+        .signature-divider::after{
+            content:"";
+            width:70px;
+            height:1px;
+            background:rgba(220,190,160,.45);
+        }
+
+        .signature-divider span{
+            color:#d6b08b;
+            font-size:14px;
+            margin:0 16px;
+            letter-spacing:4px;
+        }
     </style>
 </head>
 <body>
@@ -259,7 +280,9 @@
 <!-- CLOSING -->
 <div class="closing">
     <h2>"Một căn nhà từng là giấc mơ<br>trên những trang giấy phác thảo"</h2>
-    <div class="closing-line"></div>
+    <div class="signature-divider">
+        <span>✦</span>
+    </div>
     <p>Nay đã thành hiện thực — và mỗi ngày sống trong đó, chúng tôi biết mình đã chọn đúng.</p>
     <p style="margin-top:.9rem;font-style:italic;font-size:13px">A house that was once a dream on sketch paper — now a reality, and every day we live in it, we know we chose right.</p>
 </div>
