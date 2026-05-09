@@ -18,8 +18,13 @@
 
         /* HERO */
         .hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:flex-end;overflow:hidden}
-        .hero-bg{position:absolute;inset:0;background:url('https://lh3.googleusercontent.com/d/1WHo5ZynyYNuT54qyvCn-z75pD40wfMNz=w1920') center/cover no-repeat;animation:slowzoom 10s ease-out forwards}
-        @keyframes slowzoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+        .hero-bgs{position:absolute;inset:0;animation:slowzoom 30s ease-in-out infinite alternate}
+        .hero-bg{position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;animation:heroFade 18s ease-in-out infinite}
+        .hero-bg.bg1{background-image:url('https://lh3.googleusercontent.com/d/1WHo5ZynyYNuT54qyvCn-z75pD40wfMNz=w1920');animation-delay:0s}
+        .hero-bg.bg2{background-image:url('https://lh3.googleusercontent.com/d/1d3GyXYBm6EmI0cEipX-txbibMYl3xmDj=w1920');animation-delay:-12s}
+        .hero-bg.bg3{background-image:url('https://lh3.googleusercontent.com/d/1SOtHm5DKiIm-LxsGPLtNZ35i1RLgUrIJ=w1920');animation-delay:-6s}
+        @keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+        @keyframes heroFade{0%,25%{opacity:1}33.33%,91.66%{opacity:0}100%{opacity:1}}
         .hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,36,32,.78) 0%,rgba(44,36,32,.1) 55%,transparent 100%)}
         .hero-c{position:relative;z-index:2;padding:0 8vw 8vh;max-width:860px}
         .hero-tag{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--clay);margin-bottom:1rem;opacity:0;animation:fi 1s .5s forwards}
@@ -146,7 +151,11 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bgs">
+        <div class="hero-bg bg1"></div>
+        <div class="hero-bg bg2"></div>
+        <div class="hero-bg bg3"></div>
+    </div>
     <div class="hero-ov"></div>
     <div class="hero-c">
         <p class="hero-tag">Wabi-Sabi · Hiện đại · Gia đình · Hướng Đông Nam</p>
@@ -170,7 +179,7 @@
             <p>Nhà được thiết kế trên mặt bằng 5×20 mét — có lẽ là diện tích quen thuộc của những ngôi nhà phố, nhưng với cách bố trí đúng chỗ, từng mét vuông đều được dùng có chủ đích. Với chúng tôi, đó là "đủ". Đủ để sống, đủ để thở, và đủ để mỗi người trong gia đình có một góc của riêng mình.</p>
             <div class="stats">
                 <div class="stat"><div class="num">5×20</div><div class="lbl">Mặt bằng (m)</div></div>
-                <div class="stat"><div class="num">4</div><div class="lbl">Thành viên</div></div>
+                <div class="stat"><div class="num">3</div><div class="lbl">Phòng ngủ</div></div>
                 <div class="stat"><div class="num">3</div><div class="lbl">Tầng</div></div>
                 <div class="stat"><div class="num">SE</div><div class="lbl">Hướng Đông Nam</div></div>
             </div>
@@ -268,10 +277,10 @@
             <p>Về phong cách, chúng tôi chọn Wabi-Sabi kết hợp với hơi thở hiện đại: tường phủ sơn hiệu ứng, gỗ tự nhiên để mộc, và những đường cong mềm mại trong thiết kế thay cho sự cứng nhắc của góc vuông thông thường.</p>
             <p class="en">Textured earth-tone walls, raw natural wood, and gentle curves replacing rigid right angles.</p>
             <div class="pillars">
-                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Vật liệu tự nhiên</strong> — Gỗ mộc, vữa thô tạo nên cảm giác gần gũi với thiên nhiên</div></div>
-                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Ánh sáng tự nhiên</strong> — Giếng trời mời ánh sáng thấm sâu vào từng tầng nhà</div></div>
-                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Đường cong mềm mại</strong> — Ban công tròn, vòm cửa tạo nên sự khác biệt tinh tế</div></div>
-                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Cây xanh nội thất</strong> — Không phải trang trí — là hơi thở của ngôi nhà</div></div>
+                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Vật liệu tự nhiên</strong> — Sự kết hợp giữa gỗ tự nhiên và đá nhân tạo mang đến vẻ ấm áp, tinh tế cho không gian</div></div>
+                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Ánh sáng tự nhiên</strong> — Giếng trời, ô cửa sổ mời ánh sáng thấm sâu vào từng tầng nhà</div></div>
+                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Đường cong mềm mại</strong> — Các chi tiết bo tròn tạo cảm giác mềm và thư thái cho tổng thể</div></div>
+                <div class="pillar"><div class="pdot"></div><div class="ptext"><strong style="font-weight:500;color:var(--bark)">Cây xanh nội thất</strong> — Khoảng xanh được đặt xen kẽ trong từng không gian sống</div></div>
             </div>
         </div>
     </div>
